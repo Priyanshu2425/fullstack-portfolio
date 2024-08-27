@@ -18,19 +18,19 @@ function App() {
   const projects = [
     {
       name: "konnect kitchen",
-      tags: [],
+      description: "Konnect Kitchen is an eCommerce store for dinnerware, featuring a vast inventory of crockery. It uses React.js and Tailwind CSS for a sleek, responsive design. Secure payments are handled via Razorpay, and the backend is built with Node.js and Express.js. Inventory management and user authentication are integral features.",
       imgs: ["/kk.png", "/kk2.png", "/kk3.png"],
       link: "https://www.konnectkitchen.com/",
     },
     {
       name: "sniffit",
-      tags: [],
+      description: "Sniffit is an ethical dog breeding app built with the MERN stack. It helps pet owners find suitable mates for their dogs, promotes healthy breeding practices, and facilitates puppy adoption. The app includes chat features for communication and ensures thorough checks for dog health and compatibility.",
       imgs: ["/sniffit1.png"],
       link: "https://sniffit-frontend.vercel.app/",
     },
     {
       name: "the funkyverse",
-      tags: [],
+      description: "The Funky Verse is a modern clothing eCommerce startup that focuses on trendy and stylish apparel. As a freelance project, it features a contemporary design and user-friendly interface. The store is built with React.js for the frontend and includes secure payment integration and efficient inventory management, catering to fashion-forward customers.",
       imgs: ["/tf.png"],
       link: "https://www.thefunkyverse.com/",
     },
@@ -80,22 +80,33 @@ function App() {
               b.tech in computer science and engineering (ggsipu, dwarka, delhi)
             </p>
 
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col gap-4">
+              <div>
               <a href="https://drive.google.com/file/d/1-uhBSOVlzA-giDSbPalbtBCw-je3OyAo/view" className="flex items-center justify-center hover:underline hover:scale-110">
-                <GiAchievement /> 3rd Position Hackmatrix Indian Institue of
-                Technology, Patna, Bihar
+              <span className="text-3xl"><GiAchievement /></span>
+              <span>3rd Position Hackmatrix</span> 
               </a>
+              <span>Indian Institue of
+              Technology, Patna, Bihar</span>
+              </div>
 
+              <div>
               <a href="https://drive.google.com/file/d/1RuZaYwBLb_p-OoE_RCW4hfFf-JKhnbGV/view" className="flex items-center justify-center hover:underline hover:scale-110">
-                <GiAchievement />
-                1st Position BitBox 4.0 Jaypee Institute of Technology, Noida,
-                Uttar Pradesh
+              <span className="text-3xl"><GiAchievement /></span>
+                <span>1st Position BitBox 4.0 </span>
               </a>
-              <a href="https://drive.google.com/file/d/18I4MaKZ_FEa2SPoSb4vDlbI-1DAv_JG6/view" className="flex items-center justify-center hover:underline hover:scale-110">
-                <GiAchievement />
-                Top 10 Code4Cause Maharaja Surajmal Institute of Technology,
-                Delhi
+              <span>Jaypee Institute of Technology, Noida,
+              Uttar Pradesh</span>
+              </div>
+
+              <div>
+              <a href="https://drive.google.com/file/d/18I4MaKZ_FEa2SPoSb4vDlbI-1DAv_JG6/view" className="flex justify-center hover:underline hover:scale-110">
+              <span className="text-3xl"><GiAchievement /></span>
+                <span>Top 10 Code4Cause</span>
               </a>
+              <span>Maharaja Surajmal Institute of Technology,
+              Delhi</span>
+              </div>
             </div>
           </div>
         </div>
@@ -113,7 +124,7 @@ function App() {
               return (
                 <div
                   key={index}
-                  className="w-full flex flex-col gap-5 sm:gap-10 md:flex-row rounded-[14px] my-8"
+                  className="w-full flex flex-col sm:gap-10 md:flex-row rounded-[14px] my-4 "
                 >
                   <div className="md:w-1/2 flex flex-col justify-center items-center object-cover ">
                     <span>
@@ -121,15 +132,9 @@ function App() {
                     </span>
                   </div>
 
-                  <div className="md:w-1/2 py-8 flex flex-col justify-between text-justify">
+                  <div className="md:w-1/2 py-8 flex flex-col gap-2 justify-between text-justify">
                     <h1 className="text-2xl">{item.name}</h1>
-                    <p>
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                      Modi laudantium fuga a explicabo quibusdam ut aut
-                      perferendis, placeat, nemo vitae blanditiis praesentium
-                      quaerat voluptatem, non nisi dicta? Nostrum, laborum
-                      accusantium!
-                    </p>
+                    <p> {item.description}</p>
                     <br />
                     <div className="text-2xl">
                       <a href={item.link} target="_blank">
